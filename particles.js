@@ -1,4 +1,26 @@
-const canvas = document.getElementById("particles");
+const c=document.getElementById("particles");
+const x=c.getContext("2d");
+function resize(){c.width=innerWidth;c.height=innerHeight;}
+resize();addEventListener("resize",resize);
+
+let p=[...Array(70)].map(()=>({
+  x:Math.random()*c.width,
+  y:Math.random()*c.height,
+  r:Math.random()*2+1,
+  s:Math.random()*0.6+.2
+}));
+
+(function a(){
+  x.clearRect(0,0,c.width,c.height);
+  p.forEach(o=>{
+    x.beginPath();
+    x.arc(o.x,o.y,o.r,0,Math.PI*2);
+    x.fillStyle="rgba(255,0,0,.6)";
+    x.fill();
+    o.y-=o.s;if(o.y<0)o.y=c.height;
+  });
+  requestAnimationFrame(a);
+})(); canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
 // Full screen canvas
