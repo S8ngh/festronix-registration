@@ -3,70 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <title>Festronix 2025 Registration</title>
+
+  <!-- Stranger Things Style Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- Background Effects -->
   <div class="fog"></div>
   <div class="bg-glow"></div>
 
-<div class="container">
-  <h1 class="title glitch" data-text="FESTRONIX">FESTRONIX</h1>
-  <p class="tagline">Enter the Upside Down</p>
+  <!-- 🔴 Hero / Title -->
+  <div class="container">
+    <h1 class="title glitch" data-text="FESTRONIX">FESTRONIX</h1>
+    <p class="tagline">Enter the Upside Down</p>
+    <p id="countdown" class="countdown"></p>
+  </div>
 
-  <!-- FORM (same Google Form connected form) -->
-  <!-- yahin tumhara existing form rahega -->
-</div>
-
+  <!-- 📝 Registration Form -->
   <div class="container">
     <h1>FESTRONIX 2025</h1>
     <p class="tagline">Tech • Culture • Innovation</p>
 
     <form
-  method="POST"
-  action="https://docs.google.com/forms/d/e/1FAIpQLSeAyL5E7hCQjmqxwxycBr8OFojlFj1DmtQGscXWV3RqQGdbMg/formResponse"
-  target="hidden_iframe"
-  onsubmit="submitted=true;"
->
+      method="POST"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeAyL5E7hCQjmqxwxycBr8OFojlFj1DmtQGscXWV3RqQGdbMg/formResponse"
+      target="hidden_iframe"
+      onsubmit="submitted=true;"
+    >
 
-  <input type="text" name="entry.1642203296" placeholder="Full Name" required>
+      <input type="text" name="entry.1642203296" placeholder="Full Name" required>
+      <input type="text" name="entry.890110461" placeholder="Roll Number" required>
+      <input type="text" name="entry.1293026311" placeholder="Branch" required>
 
-  <input type="text" name="entry.890110461" placeholder="Roll Number" required>
+      <select name="entry.778213549" required>
+        <option value="">Select Year</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+      </select>
 
-  <input type="text" name="entry.1293026311" placeholder="Branch" required>
+      <input type="email" name="entry.1534799695" placeholder="Email" required>
+      <input type="tel" name="entry.1316360657" placeholder="Phone Number" required>
 
-  <select name="entry.778213549" required>
-    <option value="">Select Year</option>
-    <option>1st Year</option>
-    <option>2nd Year</option>
-    <option>3rd Year</option>
-    <option>4th Year</option>
-  </select>
+      <select name="entry.1970853861" required>
+        <option value="">Select Event</option>
+        <option>Coding Contest</option>
+        <option>Robo Race</option>
+        <option>Tech Quiz</option>
+        <option>Poster presentations</option>
+      </select>
 
-  <input type="email" name="entry.1534799695" placeholder="Email" required>
+      <button type="submit">Register</button>
 
-  <input type="tel" name="entry.1316360657" placeholder="Phone Number" required>
-
-  <select name="entry.1970853861" required>
-    <option value="">Select Event</option>
-    <option>Coding Contest</option>
-    <option>Robo Race</option>
-    <option>Tech Quiz</option>
-    <option>Poster presentations</option>
-  </select>
-
-  <button type="submit">Register</button>
       <p class="warning">⚠ Registration closes when the gate opens</p>
-
-</form>
     </form>
-    
 
     <p id="successMsg"></p>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Hidden iframe for Google Form -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- Particles -->
   <canvas id="particles"></canvas>
-<script src="particles.js"></script>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+
 </body>
 </html>
