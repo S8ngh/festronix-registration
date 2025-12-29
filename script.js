@@ -33,6 +33,7 @@ setInterval(() => {
   if (diff <= 0) {
     countdownEl.innerText = "🚪 THE GATE IS OPEN";
     return;
+    
   }
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -42,3 +43,21 @@ setInterval(() => {
   countdownEl.innerText =
     `⏳ Gate opens in ${days}d ${hours}h ${minutes}m`;
 }, 1000);
+
+/* ================= LIGHTNING EFFECT ================= */
+const lightning = document.getElementById("lightning");
+
+function triggerLightning() {
+  lightning.classList.add("flash");
+
+  setTimeout(() => {
+    lightning.classList.remove("flash");
+  }, 200);
+}
+
+// Random lightning every 6–15 seconds
+setInterval(() => {
+  if (Math.random() > 0.6) {
+    triggerLightning();
+  }
+}, Math.random() * 9000 + 6000);
