@@ -1,8 +1,6 @@
-document.getElementById("regForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+var submitted = false;
 
+document.querySelector("form").addEventListener("submit", function () {
   document.getElementById("successMsg").innerText =
-    "🎉 Registration Successful! See you at FESTRONIX 2025.";
-
-  document.getElementById("regForm").reset();
+    "✅ Registration Successful! Your data has been saved.";
 });
