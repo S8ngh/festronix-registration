@@ -179,6 +179,7 @@ button:hover {
   position: fixed;
   inset: 0;
   background: url("https://i.imgur.com/8QZ7FZK.png");
+  
   opacity: 0.15;
   animation: fogMove 60s linear infinite;
   pointer-events: none;
@@ -187,4 +188,39 @@ button:hover {
 @keyframes fogMove {
   from { background-position: 0 0; }
   to { background-position: 2000px 0; }
+}
+.glitch {
+  position: relative;
+  color: #dc2626;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  top: -2px;
+  color: #f87171;
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  top: 2px;
+  color: #7f1d1d;
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 80% 0); }
+  100% { clip-path: inset(0 0 10% 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip-path: inset(80% 0 0 0); }
+  100% { clip-path: inset(10% 0 0 0); }
 }
