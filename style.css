@@ -175,3 +175,16 @@ button:hover {
   0% { clip-path: inset(80% 0 0 0); }
   100% { clip-path: inset(10% 0 0 0); }
 }
+.fog {
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/8QZ7FZK.png");
+  opacity: 0.15;
+  animation: fogMove 60s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+  from { background-position: 0 0; }
+  to { background-position: 2000px 0; }
+}
