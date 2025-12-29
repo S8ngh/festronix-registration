@@ -11,31 +11,42 @@
     <h1>FESTRONIX 2025</h1>
     <p class="tagline">Tech • Culture • Innovation</p>
 
-    <form id="regForm">
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="text" id="roll" placeholder="Roll Number" required>
-      <input type="text" id="branch" placeholder="Branch" required>
+    <form
+  method="POST"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeAyL5E7hCQjmqxwxycBr8OFojlFj1DmtQGscXWV3RqQGdbMg/formResponse"
+  target="hidden_iframe"
+  onsubmit="submitted=true;"
+>
 
-      <select id="year" required>
-        <option value="">Select Year</option>
-        <option>1st Year</option>
-        <option>2nd Year</option>
-        <option>3rd Year</option>
-        <option>4th Year</option>
-      </select>
+  <input type="text" name="entry.1642203296" placeholder="Full Name" required>
 
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="text" name="entry.890110461" placeholder="Roll Number" required>
 
-      <select id="event" required>
-        <option value="">Select Event</option>
-        <option>Coding Contest</option>
-        <option>Robo Race</option>
-        <option>Tech Quiz</option>
-        <option>Poster Presentation</option>
-      </select>
+  <input type="text" name="entry.1293026311" placeholder="Branch" required>
 
-      <button type="submit">Register</button>
+  <select name="entry.778213549" required>
+    <option value="">Select Year</option>
+    <option>1st Year</option>
+    <option>2nd Year</option>
+    <option>3rd Year</option>
+    <option>4th Year</option>
+  </select>
+
+  <input type="email" name="entry.1534799695" placeholder="Email" required>
+
+  <input type="tel" name="entry.1316360657" placeholder="Phone Number" required>
+
+  <select name="entry.1970853861" required>
+    <option value="">Select Event</option>
+    <option>Coding Contest</option>
+    <option>Robo Race</option>
+    <option>Tech Quiz</option>
+    <option>Poster presentations</option>
+  </select>
+
+  <button type="submit">Register</button>
+
+</form>
     </form>
 
     <p id="successMsg"></p>
