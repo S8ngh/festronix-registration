@@ -365,6 +365,7 @@ button:hover {
   animation: glitchBottom 1.5s infinite linear alternate-reverse;
 }
 
+
 @keyframes glitchTop {
   0% { clip-path: inset(0 0 80% 0); }
   100% { clip-path: inset(0 0 10% 0); }
@@ -373,4 +374,25 @@ button:hover {
 @keyframes glitchBottom {
   0% { clip-path: inset(80% 0 0 0); }
   100% { clip-path: inset(10% 0 0 0); }
+}
+/* ================= LIGHTNING FLASH ================= */
+.lightning {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.flash {
+  animation: lightningFlash 0.2s linear;
+}
+
+@keyframes lightningFlash {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  40% { opacity: 0.4; }
+  60% { opacity: 1; }
+  100% { opacity: 0; }
 }
