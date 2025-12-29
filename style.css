@@ -130,6 +130,7 @@ button:hover {
   font-weight: bold;
 }
 .warning {
+  
   text-align: center;
   margin-top: 15px;
   color: #fb7185;
@@ -138,4 +139,39 @@ button:hover {
 
 @keyframes blink {
   50% { opacity: 0.4; }
+}
+.glitch {
+  position: relative;
+  color: #dc2626;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  top: -2px;
+  color: #f87171;
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  top: 2px;
+  color: #7f1d1d;
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 80% 0); }
+  100% { clip-path: inset(0 0 10% 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip-path: inset(80% 0 0 0); }
+  100% { clip-path: inset(10% 0 0 0); }
 }
