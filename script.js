@@ -52,6 +52,7 @@ function triggerLightning() {
 
   setTimeout(() => {
     lightning.classList.remove("flash");
+    
   }, 200);
 }
 
@@ -61,3 +62,6 @@ setInterval(() => {
     triggerLightning();
   }
 }, Math.random() * 9000 + 6000);
+setInterval(() => {
+  triggerLightning();
+}, 4000);
