@@ -387,6 +387,7 @@ button:hover {
 
 .flash {
   animation: lightningFlash 0.2s linear;
+  
 }
 
 @keyframes lightningFlash {
@@ -395,4 +396,25 @@ button:hover {
   40% { opacity: 0.4; }
   60% { opacity: 1; }
   100% { opacity: 0; }
+}
+
+/* ================= RED EYE BLINK ================= */
+.red-eye {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  box-shadow: 0 0 15px red;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: eyeBlink 8s infinite;
+}
+
+@keyframes eyeBlink {
+  0%, 92%, 100% { opacity: 0; }
+  94%, 96% { opacity: 1; }
 }
