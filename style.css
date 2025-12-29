@@ -434,26 +434,34 @@ button:hover {
   100% { clip-path: inset(10% 0 0 0); }
 }
 /* ================= LIGHTNING FLASH ================= */
-.lightning {
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.8);
-  opacity: 0;
-  pointer-events: none;
-  z-index: 999;
+/* ===== TAP OVERLAY ===== */
+#tapOverlay{
+  position:fixed; inset:0; z-index:10000;
+  background:#000; display:flex;
+  align-items:center; justify-content:center;
 }
-
-.flash {
-  animation: lightningFlash 0.2s linear;
-  
+.tapText{
+  color:#dc2626; font-size:32px; letter-spacing:4px;
+  text-shadow:0 0 10px red, 0 0 30px darkred;
+  animation:pulseTap 1.5s infinite;
 }
+@keyframes pulseTap{50%{opacity:.5}}
 
-@keyframes lightningFlash {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  40% { opacity: 0.4; }
-  60% { opacity: 1; }
-  100% { opacity: 0; }
+/* ===== STRONG LIGHTNING ===== */
+.lightning{
+  position:fixed; inset:0; z-index:9999;
+  background:radial-gradient(circle, rgba(255,255,255,1), rgba(255,0,0,.9));
+  opacity:0; pointer-events:none;
+}
+.flash{
+  animation:lightningFlash .6s ease-in-out;
+}
+@keyframes lightningFlash{
+  0%{opacity:0}
+  15%{opacity:1}
+  35%{opacity:.4}
+  55%{opacity:1}
+  100%{opacity:0}
 }
 
 /* ================= RED EYE BLINK ================= */
@@ -492,6 +500,7 @@ button:hover {
 
 @keyframes creepMove {
   0% {
+    
     transform: translateX(-200px) translateY(0);
   }
   50% {
@@ -501,3 +510,4 @@ button:hover {
     transform: translateX(120vw) translateY(0);
   }
   }
+
