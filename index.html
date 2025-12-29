@@ -4,29 +4,31 @@
   <meta charset="UTF-8">
   <title>Festronix 2025 Registration</title>
 
-  <!-- Stranger Things Style Font -->
+  <!-- Stranger Things Font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- ⚡ Lightning Layer -->
   <div class="lightning" id="lightning"></div>
 
-  <!-- Background Effects -->
+  <!-- 🌫 Background Effects -->
   <div class="fog"></div>
   <div class="red-eye"></div>
   <div class="shadow-creep"></div>
   <div class="bg-glow"></div>
 
-  <!-- 🔴 Hero / Title -->
+  <!-- 🔴 HERO -->
   <div class="container">
     <h1 class="title glitch" data-text="FESTRONIX">FESTRONIX</h1>
     <p class="tagline">Enter the Upside Down</p>
     <p id="countdown" class="countdown"></p>
   </div>
 
-  <!-- 📝 Registration Form -->
+  <!-- 📝 FORM -->
   <div class="container">
     <h1>FESTRONIX 2025</h1>
     <p class="tagline">Tech • Culture • Innovation</p>
@@ -37,7 +39,6 @@
       target="hidden_iframe"
       onsubmit="submitted=true;"
     >
-
       <input type="text" name="entry.1642203296" placeholder="Full Name" required>
       <input type="text" name="entry.890110461" placeholder="Roll Number" required>
       <input type="text" name="entry.1293026311" placeholder="Branch" required>
@@ -62,7 +63,28 @@
       </select>
 
       <button type="submit">Register</button>
+      <p class="warning">⚠ Registration closes when the gate opens</p>
+    </form>
 
+    <p id="successMsg"></p>
+  </div>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- 🔊 Thunder -->
+  <audio id="thunderSound"
+         src="https://assets.mixkit.co/sfx/preview/mixkit-thunder-rumble-1299.mp3"
+         preload="auto"></audio>
+
+  <!-- 🩸 Particles -->
+  <canvas id="particles"></canvas>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+
+</body>
+</html>
       <p class="warning">⚠ Registration closes when the gate opens</p>
     </form>
 
