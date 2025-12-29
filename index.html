@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Festronix 2025 Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="container">
+    <h1>FESTRONIX 2025</h1>
+    <p class="tagline">Tech • Culture • Innovation</p>
+
+    <form id="regForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="roll" placeholder="Roll Number" required>
+      <input type="text" id="branch" placeholder="Branch" required>
+
+      <select id="year" required>
+        <option value="">Select Year</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+      </select>
+
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <select id="event" required>
+        <option value="">Select Event</option>
+        <option>Coding Contest</option>
+        <option>Robo Race</option>
+        <option>Tech Quiz</option>
+        <option>Poster Presentation</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <p id="successMsg"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
