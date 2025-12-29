@@ -54,6 +54,19 @@ function triggerLightning() {
     lightning.classList.remove("flash");
     
   }, 200);
+  const thunder = document.getElementById("thunderSound");
+
+function triggerLightning() {
+  lightning.classList.add("flash");
+
+  // 🔊 Thunder sound
+  thunder.currentTime = 0;
+  thunder.play();
+
+  setTimeout(() => {
+    lightning.classList.remove("flash");
+  }, 200);
+}
 }
 
 // Random lightning every 6–15 seconds
